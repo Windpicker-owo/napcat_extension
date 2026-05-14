@@ -1,0 +1,28 @@
+{
+  "name": "napcat_extension",
+  "version": "1.0.0",
+  "description": "NapCat 扩展操作插件：禁言/踢人/撤回/表情回应/戳一戳/群打卡等（通过 napcat_adapter 调用 API）",
+  "author": "MoFox Team",
+  "dependencies": {
+    "plugins": ["napcat_adapter"],
+    "components": []
+  },
+  "categories": ["tool"],
+  "tags": ["napcat", "extension", "group management", "message interaction"],
+  "include": [
+    {"component_type": "config", "component_name": "config", "dependencies": []},
+    {"component_type": "action", "component_name": "mute_group_member", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "unmute_group_member", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "react_to_message", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "poke_group_member", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "recall_message", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "group_sign", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "kick_group_member", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "action", "component_name": "send_file", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]},
+    {"component_type": "tool", "component_name": "save_message_file", "dependencies": ["napcat_adapter:adapter:napcat_adapter"]}
+  ],
+  "entry_point": "plugin.py",
+  "min_core_version": "1.0.0",
+  "python_dependencies": [],
+  "dependencies_required": true
+}
