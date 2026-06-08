@@ -144,6 +144,7 @@ class _NapcatBaseAction(BaseAction):
     """napcat_extension Action 基类：提供通用激活判断。"""
 
     associated_platforms: list[str] = ["qq"]
+    associated_types = ["command"]
 
     async def go_activate(self) -> bool:  # noqa: D401
         """根据插件配置判定是否激活。"""
@@ -378,6 +379,7 @@ class SendFileAction(_NapcatBaseAction):
     action_name: str = "send_file"
     action_description: str = "向当前会话发送一个本地文件，参数必须是文件绝对路径。"
     chat_type: ChatType = ChatType.ALL
+    associated_types = ["file"]
 
     async def _feature_enabled(self, config: Any) -> bool:
         return bool(getattr(getattr(config, "features", None), "enable_send_file", False))

@@ -1,7 +1,7 @@
 {
   "name": "napcat_extension",
   "display_name": "NapCat 扩展",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NapCat 扩展操作插件：禁言/踢人/撤回/表情回应/戳一戳/群打卡等（通过 napcat_adapter 调用 API）",
   "author": "MoFox Team",
   "dependencies": {
